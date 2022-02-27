@@ -1,4 +1,4 @@
-package thethao.kimkhi.model;
+package thethao.kimkhi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package thethao.kimkhi.model;
+package thethao.kimkhi.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,16 +6,16 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
+
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryDto implements Serializable{
-	private Long categoryId;
+public class ChangePassword {
 	@NotEmpty
-	@Length(min = 3)
-	private String name;
-	
-	private boolean isEdit = false;
+	@Length(min = 6)
+	private String newPassword;
+	@NotEmpty
+	@Length(min = 6)
+	private String confirmPassword;
 }
